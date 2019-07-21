@@ -5,6 +5,23 @@
     <title>Owners</title>
 </head>
 <body>
-    <h1 th:text="'List of owners'">Rendering the view of index page</h1>
+    <div align="Center">
+        <h1 th:text="'List of owners'">Rendering the view of index page</h1>
+
+        <table border="1" cellpadding="5px solid" cellspacing="1px">
+            <thead>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </thead>
+            <tbody>
+                <tr th:each="owner:${owners}">
+                    <td th:text="${owner?.id}">1</td>
+                    <td th:text="${owner?.firstName}">Shri</td>
+                    <td th:text="${owner?.lastName}">Smith</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
