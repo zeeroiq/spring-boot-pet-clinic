@@ -3,9 +3,11 @@ package com.shri.spring.boot.service.map;
 
 import com.shri.spring.boot.model.Vet;
 import com.shri.spring.boot.service.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override

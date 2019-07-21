@@ -2,9 +2,11 @@ package com.shri.spring.boot.service.map;
 
 import com.shri.spring.boot.model.Owner;
 import com.shri.spring.boot.service.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override

@@ -9,20 +9,19 @@ import com.shri.spring.boot.model.Owner;
 import com.shri.spring.boot.model.Vet;
 import com.shri.spring.boot.service.OwnerService;
 import com.shri.spring.boot.service.VetService;
-import com.shri.spring.boot.service.map.OwnerServiceMap;
-import com.shri.spring.boot.service.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        this.ownerService = new OwnerServiceMap();
-        this.vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
-
 
     @Override
     public void run(String... args) throws Exception {

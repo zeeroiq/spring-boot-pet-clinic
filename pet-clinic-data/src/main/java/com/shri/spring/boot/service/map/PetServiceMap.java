@@ -2,9 +2,11 @@ package com.shri.spring.boot.service.map;
 
 import com.shri.spring.boot.model.Pet;
 import com.shri.spring.boot.service.CrudService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
 
     @Override
