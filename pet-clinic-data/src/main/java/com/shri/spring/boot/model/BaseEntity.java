@@ -7,5 +7,5 @@ import java.io.Serializable;
 @Data
 public class BaseEntity implements Serializable {
 
-    private long Id;
+    private Long Id;
 }
