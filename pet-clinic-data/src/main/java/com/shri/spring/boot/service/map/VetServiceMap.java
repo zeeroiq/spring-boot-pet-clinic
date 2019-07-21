@@ -2,11 +2,11 @@ package com.shri.spring.boot.service.map;
 
 
 import com.shri.spring.boot.model.Vet;
-import com.shri.spring.boot.service.CrudService;
+import com.shri.spring.boot.service.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
     public Set<Vet> findAll() {
