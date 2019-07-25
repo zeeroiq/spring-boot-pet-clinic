@@ -2,6 +2,7 @@ package com.shri.spring.boot.model;
 
 import lombok.Data;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -17,7 +18,8 @@ public class Visit extends BaseEntity {
 
     private LocalDate date;
     private String description;
-    @ManyToOne
+
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "pet_id")
     private Pet pet;
 

@@ -2,6 +2,7 @@ package com.shri.spring.boot.service.map;
 
 import com.shri.spring.boot.model.Speciality;
 import com.shri.spring.boot.service.SpecialityService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -11,6 +12,7 @@ import java.util.Set;
  * @Date: 7/22/2019
  */
 @Service
+@Profile({"default", "map"})
 public class SpecialityMapService extends AbstractMapService<Speciality, Long> implements SpecialityService {
     @Override
     public Set<Speciality> findAll() {
