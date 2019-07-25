@@ -95,6 +95,12 @@ public class DataLoader implements CommandLineRunner {
         VinPet.setName("Billu");
         owner1.getPets().add(VinPet);
 
+        Visit dogVisit = new Visit();
+        dogVisit.setPet(shriPet);
+        dogVisit.setDate(LocalDate.now());
+        dogVisit.setDescription("Naughty Dog");
+        visitService.save(dogVisit);
+        
         System.out.println("Owners are loaded..");
 
 
