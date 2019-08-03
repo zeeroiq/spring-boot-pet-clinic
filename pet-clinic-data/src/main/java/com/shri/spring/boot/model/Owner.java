@@ -1,5 +1,6 @@
 package com.shri.spring.boot.model;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.CascadeType;
@@ -11,6 +12,17 @@ import java.util.Set;
 @Data
 @Entity
 public class Owner extends Persons {
+
+
+    @Builder
+    public Owner(Long id, String firstName, String lastName, String address, String city, String contact, Set<Pet> pets) {
+        super(id, firstName, lastName);
+        this.address = address;
+        this.city = city;
+        this.contact = contact;
+        this.pets = pets;
+    }
+
 
     private String address;
     private String city;

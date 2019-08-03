@@ -50,5 +50,5 @@
     <scm>
         <developerConnection>scm:git:https://github.com/zero1q/spring-boot-pet-clinic.git</developerConnection>
       <tag>HEAD</tag>
-  </scm>
+    </scm>
 </project>

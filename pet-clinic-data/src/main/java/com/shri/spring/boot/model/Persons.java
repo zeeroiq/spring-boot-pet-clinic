@@ -1,13 +1,21 @@
 package com.shri.spring.boot.model;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
 @Data
+@NoArgsConstructor
 @MappedSuperclass
 public class Persons extends BaseEntity{
+
+    public Persons(Long id, String firstName, String lastName) {
+        super(id);
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
     @Column(name = "first_name")
     private String firstName;
