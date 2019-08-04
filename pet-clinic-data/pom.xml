@@ -31,6 +31,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <scope>provided</scope>
             <optional>true</optional>
         </dependency>
         <dependency>
@@ -75,17 +76,17 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.junit.platform</groupId>
-                        <artifactId>junit-platform-engine</artifactId>
-                        <version>1.3.2</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
+            <!--<plugin>-->
+                <!--&lt;!&ndash;<artifactId>maven-surefire-plugin</artifactId>&ndash;&gt;-->
+                <!--&lt;!&ndash;<version>2.22.2</version>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dependencies>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<groupId>org.junit.platform</groupId>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<artifactId>junit-platform-engine</artifactId>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<version>1.3.2</version>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dependencies>&ndash;&gt;-->
+            <!--</plugin>-->
         </plugins>
     </build>
 
