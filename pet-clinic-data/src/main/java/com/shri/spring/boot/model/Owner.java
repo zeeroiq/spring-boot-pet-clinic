@@ -23,6 +23,7 @@ public class Owner extends Persons {
         this.pets = pets;
     }
 
+    public Owner(){}
 
     private String address;
     private String city;

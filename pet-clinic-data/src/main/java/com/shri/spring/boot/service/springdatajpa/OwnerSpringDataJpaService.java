@@ -59,6 +59,6 @@ public class OwnerSpringDataJpaService implements OwnerService {
 
     @Override
     public void deleteById(Long aLong) {
-
+        ownerRepository.deleteById(aLong);
     }
 }
