@@ -1,6 +1,7 @@
 package com.shri.spring.boot.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -8,6 +9,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Data
+@EqualsAndHashCode(exclude = "visits")
 @Entity
 public class Pet extends BaseEntity{
 

@@ -100,4 +100,5 @@ class OwnerSpringDataJpaServiceTest {
         service.deleteById(1L);
         verify(ownerRepository).deleteById(anyLong());
     }
+
 }

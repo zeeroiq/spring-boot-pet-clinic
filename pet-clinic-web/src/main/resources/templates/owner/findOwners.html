@@ -1,11 +1,11 @@
 <html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'owners')}">
 <head>
   <meta charset="UTF-8">
-  <title id="pageTitle">Find Owners</title>
+  <title id="pageTitle"> Owners</title>
 </head>
 <body>
 
-<h2>Find Owners</h2>
+<h2> Owners</h2>
 
 <form th:object="${owner}" th:action="@{/owners}" method="get"
       class="form-horizontal" id="search-owner-form">
@@ -23,7 +23,7 @@
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Find
+      <button type="submit" class="btn btn-default">
         Owner</button>
     </div>
   </div>
