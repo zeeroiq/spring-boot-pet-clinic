@@ -22,7 +22,9 @@ public class Owner extends Persons {
         this.address = address;
         this.city = city;
         this.contact = contact;
-        this.pets = pets;
+        if(pets != null){
+            this.pets = pets;
+        }
     }
 
     public Owner(){}
@@ -33,4 +35,22 @@ public class Owner extends Persons {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private Set<Pet> pets = new HashSet<>();
+
+    public Pet getPet(String name, boolean ignoreNew) {
+        name = name.toLowerCase();
+        for(Pet pet: pets) {
+            if(!ignoreNew || !pet.isNew()) {
+                String compareName = pet.getName();
+                compareName = compareName.toLowerCase();
+                if(compareName.equals(name)) {
+                    return pet;
+                }
+            }
+        }
+        return null;
+    }
+
+    public Pet getPet(String name) {
+        return getPet(name, false);
+    }
 }

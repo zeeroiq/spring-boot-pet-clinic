@@ -6,23 +6,31 @@
     <title>Owners</title>
 </head>
 <body>
-    <div align="Center">
-        <h1 th:text="'List of owners'">Rendering the view of index page</h1>
+<div align="Center">
+    <h1 th:text="'List of owners'">Rendering the view of index page</h1>
 
-        <table class="table table-striped" border="1" cellpadding="5px solid" cellspacing="1px">
-            <thead>
-                <th style="width: 150px;">Id</th>
-                <th style="width: 150px;">First Name</th>
-                <th style="width: 150px;">Last Name</th>
-            </thead>
-            <tbody>
-                <tr th:each="owner:${owners}">
-                    <td th:text="${owner?.id}">1</td>
-                    <td th:text="${owner?.firstName}">Shri</td>
-                    <td th:text="${owner?.lastName}">Smith</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <table class="table table-striped" border="1" cellpadding="5px solid" cellspacing="1px">
+        <thead>
+        <tr>
+            <th style="width: 150px;">Name</th>
+            <th style="width: auto;">Address</th>
+            <th style="width: 150px;">City</th>
+            <th style="width: 150px;">Contact</th>
+            <th style="width: 150px">Pets</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="owner : ${owners}">
+            <td>
+                <a th:href="@{/owners/__${owner.id}__}" th:text="${owner.firstName + ' ' + owner.lastName}"/></a>
+            </td>
+            <td th:text="${owner.address}"/>
+            <td th:text="${owner.city}"/>
+            <td th:text="${owner.contact}"/>
+            <td><span th:each="pet : ${owner.pets}" th:text="${pet.name} "/></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>

@@ -1,6 +1,7 @@
 package com.shri.spring.boot.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.Entity;
 
@@ -10,6 +11,7 @@ import javax.persistence.Entity;
  */
 @Data
 @Entity
+@EqualsAndHashCode(callSuper = false)
 public class Speciality extends BaseEntity {
 
     private String description;

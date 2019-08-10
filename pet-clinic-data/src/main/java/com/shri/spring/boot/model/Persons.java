@@ -1,6 +1,7 @@
 package com.shri.spring.boot.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
@@ -9,6 +10,7 @@ import javax.persistence.MappedSuperclass;
 @Data
 @NoArgsConstructor
 @MappedSuperclass
+@EqualsAndHashCode(callSuper = false)
 public class Persons extends BaseEntity{
 
     public Persons(Long id, String firstName, String lastName) {

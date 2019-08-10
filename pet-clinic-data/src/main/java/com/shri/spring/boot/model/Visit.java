@@ -1,6 +1,7 @@
 package com.shri.spring.boot.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -14,6 +15,7 @@ import java.time.LocalDate;
  */
 @Data
 @Entity
+@EqualsAndHashCode(callSuper = false)
 public class Visit extends BaseEntity {
 
     private LocalDate date;

@@ -7,14 +7,14 @@
 <body>
 
 <h2>Owner</h2>
-<form th:object="${owner}" th:action="@{/owners}" action="/owners" class="form-horizontal" id="add-owner-form" method="post">
+<!--<form th:object="${owner}" th:action="@{/owners}" action="/owners" class="form-horizontal" id="add-owner-form" method="post">-->
+<form th:object="${owner}" class="form-horizontal" id="add-owner-form" method="post">
   <div class="form-group has-feedback">
-    <input type="hidden" th:field="*{id}"/>
     <input th:replace="~{fragments/inputField :: input ('First Name', 'firstName', 'text')}"/>
     <input th:replace="~{fragments/inputField :: input ('Last Name', 'lastName', 'text')}"/>
     <input th:replace="~{fragments/inputField :: input ('Address', 'address', 'text')}"/>
     <input th:replace="~{fragments/inputField :: input ('City', 'city', 'text')}"/>
-    <input th:replace="~{fragments/inputField :: input ('Telephone', 'telephone', 'text')}"/>
+    <input th:replace="~{fragments/inputField :: input ('Contact', 'contact', 'text')}"/>
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">

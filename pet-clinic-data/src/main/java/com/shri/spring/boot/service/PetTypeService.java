@@ -7,4 +7,5 @@ import com.shri.spring.boot.model.PetType;
  * @Date: 7/21/2019
  */
 public interface PetTypeService extends CrudService<PetType, Long>{
+
 }
