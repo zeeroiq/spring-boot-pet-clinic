@@ -7,19 +7,21 @@
 </head>
 <body>
     <div align="center">
-        <h1 th:text="'List of vets'">Rendering the view of index page</h1>
+        <h1 th:text="'Veterinarians'">List of Veterinarians</h1>
 
-        <table class="table table-striped" border="1" cellpadding="5px solid" cellspacing="1px">
+        <table id="vets" class="table table-striped" border="1" cellpadding="5px solid" cellspacing="1px">
             <thead>
             <th style="width: 150px;">Id</th>
-            <th style="width: 150px;">First Name</th>
-            <th style="width: 150px;">Last Name</th>
+            <th style="width: 150px;">Name</th>
+            <th style="width: 150px;">Speciality</th>
             </thead>
             <tbody>
             <tr th:each="vet:${vets}">
                 <td th:text="${vet?.id}">1</td>
-                <td th:text="${vet?.firstName}">Alex</td>
-                <td th:text="${vet?.lastName}">Daddario</td>
+                <td th:text="${vet?.firstName} + ' ' + ${vet?.lastName}">Alex Daddario</td>
+                <td><span th:each="speciality : ${vet?.specialities}"
+                          th:text="${speciality.description} + ' '"/>
+                    <span th:if="${vet?.specialities?.size() == 0}">None</span></td>
             </tr>
             </tbody>
         </table>
